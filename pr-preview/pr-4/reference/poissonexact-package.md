@@ -1,6 +1,6 @@
 # poissonexact: Exact Conditional Inference for Poisson Regression
 
-Computes exact conditional maximum likelihood estimates, exact p-values,
+Compute exact conditional maximum likelihood estimates, exact p-values,
 and exact confidence intervals for categorical effects in Poisson
 regression models with an optional offset and stratification. Nuisance
 parameters (stratum intercepts and other model effects not under test)
