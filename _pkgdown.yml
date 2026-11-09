@@ -13,9 +13,11 @@ development:
 
 articles:
 - title: Theory and Implementation
+  navbar: ~
   contents:
   - Theory-Implementation
 
 - title: A Low-Incidence Vaccine Efficacy Example
+  navbar: ~
   contents:
   - Example
