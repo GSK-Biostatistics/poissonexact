@@ -111,7 +111,6 @@ ep_closed_form(
   offset_log = FALSE,
   strata = "strata"
 )
-
 }
 \references{
 Guess HA, Lydick EG, Small RD, Miller LP,

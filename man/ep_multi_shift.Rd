@@ -145,7 +145,6 @@ ep_multi_shift(
   verbose = TRUE,
   ci_type = "two-sided"
 )
-
 }
 \references{
 Hirji KF, Mehta CR, Patel NR. Computing Distributions for

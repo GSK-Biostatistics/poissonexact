@@ -79,6 +79,8 @@
 #'   `vignette("Theory-Implementation")`'s discussion of reusing an already-built
 #'   exact distribution.
 #'
+#' @export
+#'
 #' @examples
 #' df <- data.frame(
 #'   group = c(1L, 1L, 1L, 0L, 0L, 0L),
@@ -106,8 +108,6 @@
 #'
 #' # A different confidence level, reusing the same OUTDIST table:
 #' recompute_exact_inference(fit, "group1", alpha = 0.10)
-#'
-#' @export
 recompute_exact_inference <- function(
     fit,
     parm,

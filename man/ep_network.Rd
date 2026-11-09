@@ -127,7 +127,6 @@ ep_network(
   verbose = TRUE,
   ci_type = "two-sided"
 )
-
 }
 \references{
 Mehta CR, Patel NR, Senchaudhuri P. Exact Stratified Linear

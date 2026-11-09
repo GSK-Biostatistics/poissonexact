@@ -903,6 +903,13 @@
 #'   `PValue`, and `SuffStat`), `OUTDIST` (the exact distribution of the
 #'   sufficient statistic), and `call`.
 #'
+#' @references Hirji KF, Mehta CR, Patel NR. Computing Distributions for
+#'   Exact Logistic Regression. JASA, 82(400):1110-1117, 1987.
+#' @references Mehta CR, Patel NR. Exact logistic regression: theory and
+#'   examples. Statistics in Medicine, 14(19):2143-2160, 1995.
+#'
+#' @export
+#'
 #' @examples
 #' df <- data.frame(
 #'   group = c(1L, 1L, 1L, 0L, 0L, 0L),
@@ -926,12 +933,6 @@
 #'   verbose = TRUE,
 #'   ci_type = "two-sided"
 #' )
-#'
-#' @references Hirji KF, Mehta CR, Patel NR. Computing Distributions for
-#'   Exact Logistic Regression. JASA, 82(400):1110-1117, 1987.
-#' @references Mehta CR, Patel NR. Exact logistic regression: theory and
-#'   examples. Statistics in Medicine, 14(19):2143-2160, 1995.
-#' @export
 ep_multi_shift <- function(
     formula,
     data,

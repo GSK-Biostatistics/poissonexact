@@ -625,6 +625,12 @@
 #' @return An object of class `c("ep_network", "ep_multi_shift", "ep_fit")`,
 #'   in the same format as [ep_multi_shift()].
 #'
+#' @references Mehta CR, Patel NR, Senchaudhuri P. Exact Stratified Linear
+#'   Rank Tests for Ordered Categorical and Binary Data. Journal of
+#'   Computational and Graphical Statistics, 1(1):21-40, 1992.
+#'
+#' @export
+#'
 #' @examples
 #' df <- data.frame(
 #'   group = c(1L, 1L, 1L, 0L, 0L, 0L),
@@ -648,11 +654,6 @@
 #'   verbose = TRUE,
 #'   ci_type = "two-sided"
 #' )
-#'
-#' @references Mehta CR, Patel NR, Senchaudhuri P. Exact Stratified Linear
-#'   Rank Tests for Ordered Categorical and Binary Data. Journal of
-#'   Computational and Graphical Statistics, 1(1):21-40, 1992.
-#' @export
 ep_network <- function(
     formula,
     data,

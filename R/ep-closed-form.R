@@ -216,6 +216,18 @@ cumulative_dist_natlog <- function(
 #'   `PValue`, and `SuffStat`), `OUTDIST` (the exact distribution of the
 #'   sufficient statistic), and `call`.
 #'
+#' @references Guess HA, Lydick EG, Small RD, Miller LP,
+#'  Exact binomial confidence intervals for the relative risk in follow-up
+#'  studies with sparsely stratified incidence density data, American Journal
+#'  of Epidemiology, Volume 125, Issue 2, February 1987, Pages 340-347,
+#'  https://doi.org/10.1093/oxfordjournals.aje.a114535
+#' @references Guess HA, Thomas JE. A rapidly converging algorithm
+#'  for exact binomial confidence intervals about the relative risk
+#'  in follow-up studies with stratified incidence-density data. Epidemiology.
+#'  1990 Jan;1(1):75-7. doi: 10.1097/00001648-199001000-00016. PMID: 2081244.
+#'
+#' @export
+#'
 #' @examples
 #' df <- data.frame(
 #'   cases = c(3, 32, 1, 19, 2, 24, 4, 40),
@@ -230,18 +242,6 @@ cumulative_dist_natlog <- function(
 #'   offset_log = FALSE,
 #'   strata = "strata"
 #' )
-#'
-#' @references Guess HA, Lydick EG, Small RD, Miller LP,
-#'  Exact binomial confidence intervals for the relative risk in follow-up
-#'  studies with sparsely stratified incidence density data, American Journal
-#'  of Epidemiology, Volume 125, Issue 2, February 1987, Pages 340-347,
-#'  https://doi.org/10.1093/oxfordjournals.aje.a114535
-#' @references Guess HA, Thomas JE. A rapidly converging algorithm
-#'  for exact binomial confidence intervals about the relative risk
-#'  in follow-up studies with stratified incidence-density data. Epidemiology.
-#'  1990 Jan;1(1):75-7. doi: 10.1097/00001648-199001000-00016. PMID: 2081244.
-#'
-#' @export
 ep_closed_form <- function(
     formula,
     data,
