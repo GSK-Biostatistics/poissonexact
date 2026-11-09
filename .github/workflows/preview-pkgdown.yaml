@@ -54,7 +54,7 @@ jobs:
 
       - name: Copy preview into pr-preview/pr-<n>
         run: |
-          PREVIEW_DIR="gh-pages/pr-preview/pr-${{ github.event.pull_request.number }}"
+          PREVIEW_DIR="gh-pages/pr-preview/pr-${{ github.event.pull_request.number }}/dev"
           rm -rf "$PREVIEW_DIR"
           mkdir -p "$PREVIEW_DIR"
           rsync -av "docs/" "$PREVIEW_DIR/"
