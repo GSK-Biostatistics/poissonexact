@@ -1,6 +1,6 @@
 Package: poissonexact
 Title: Exact Conditional Inference for Poisson Regression
-Version: 0.0.0.9000
+Version: 0.1.0
 Authors@R: c(
     person("Ali", "Charkhi", , "ali.x.charkhi@gsk.com", role = c("aut", "cre")),
     person("Dragoș", "Moldovan-Grünfeld", , "dragos.v.moldovan-grunfeld@gsk.com", role = "ctb"),
