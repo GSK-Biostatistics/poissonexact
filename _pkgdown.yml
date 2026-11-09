@@ -1,0 +1,23 @@
+url: https://gsk-biostatistics.github.io/poissonexact/
+template:
+  bootstrap: 5
+  bootswatch: united
+  math-rendering: katex
+
+navbar:
+  type: light
+  bg: none
+
+development:
+  mode: auto
+
+articles:
+- title: Theory and Implementation
+  navbar: ~
+  contents:
+  - Theory-Implementation
+
+- title: A Low-Incidence Vaccine Efficacy Example
+  navbar: ~
+  contents:
+  - Example

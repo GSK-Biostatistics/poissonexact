@@ -903,35 +903,36 @@
 #'   `PValue`, and `SuffStat`), `OUTDIST` (the exact distribution of the
 #'   sufficient statistic), and `call`.
 #'
+#' @references Hirji KF, Mehta CR, Patel NR. Computing Distributions for
+#'   Exact Logistic Regression. JASA, 82(400):1110-1117, 1987.
+#' @references Mehta CR, Patel NR. Exact logistic regression: theory and
+#'   examples. Statistics in Medicine, 14(19):2143-2160, 1995.
+#'
+#' @export
+#'
 #' @examples
 #' df <- data.frame(
-#'   group = c( 1L,  1L,  1L,  0L,  0L,  0L),
-#'   age      = c(50L, 60L, 70L, 50L, 60L, 70L),
+#'   group = c(1L, 1L, 1L, 0L, 0L, 0L),
+#'   age = c(50L, 60L, 70L, 50L, 60L, 70L),
 #'   subjects = c(3492, 2141, 1711, 3525, 2166, 1724),
-#'   cases    = c(   3,    2,    1,   10,   7,   5),
-#'   futime   = c(50, 60, 40, 51, 62, 42)
+#'   cases = c(3, 2, 1, 10, 7, 5),
+#'   futime = c(50, 60, 40, 51, 62, 42)
 #' )
 #'
 #' df$lnfutime <- log(df$futime)
 #'
 #' ep_multi_shift(
-#'   formula    = cases ~ group,
-#'   data       = df,
-#'   offset     = "lnfutime",
+#'   formula = cases ~ group,
+#'   data = df,
+#'   offset = "lnfutime",
 #'   offset_log = TRUE,
-#'   strata     = "age",
+#'   strata = "age",
 #'   exact_vars = "group",
 #'   ref_levels = list(group="0", age="50"),
-#'   alpha      = 0.05,
-#'   verbose    = TRUE,
+#'   alpha = 0.05,
+#'   verbose = TRUE,
 #'   ci_type = "two-sided"
 #' )
-#'
-#' @references Hirji KF, Mehta CR, Patel NR. Computing Distributions for
-#'   Exact Logistic Regression. JASA, 82(400):1110-1117, 1987.
-#' @references Mehta CR, Patel NR. Exact logistic regression: theory and
-#'   examples. Statistics in Medicine, 14(19):2143-2160, 1995.
-#' @export
 ep_multi_shift <- function(
     formula,
     data,

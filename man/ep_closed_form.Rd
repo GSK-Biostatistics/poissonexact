@@ -99,19 +99,18 @@ regression test that locks in the expected divergence.
 }
 \examples{
 df <- data.frame(
-  cases  = c(3, 32, 1, 19, 2, 24, 4, 40),
-  fu     = c(100, 100, 120, 120, 150, 150, 170, 170),
-  trt    = c(1, 0, 1, 0, 1, 0, 1, 0),
+  cases = c(3, 32, 1, 19, 2, 24, 4, 40),
+  fu = c(100, 100, 120, 120, 150, 150, 170, 170),
+  trt = c(1, 0, 1, 0, 1, 0, 1, 0),
   strata = c(1, 1, 2, 2, 3, 3, 4, 4)
 )
 ep_closed_form(
-  formula    = cases ~ trt,
-  data       = df,
-  offset     = "fu",
+  formula = cases ~ trt,
+  data = df,
+  offset = "fu",
   offset_log = FALSE,
-  strata     = "strata"
+  strata = "strata"
 )
-
 }
 \references{
 Guess HA, Lydick EG, Small RD, Miller LP,

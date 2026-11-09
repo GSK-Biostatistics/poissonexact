@@ -100,7 +100,6 @@ recompute_exact_inference(fit, "group1")
 
 # A different confidence level, reusing the same OUTDIST table:
 recompute_exact_inference(fit, "group1", alpha = 0.10)
-
 }
 \seealso{
 \code{\link[=ep_multi_shift]{ep_multi_shift()}}, \code{\link[=ep_network]{ep_network()}}, \code{\link[=ep_closed_form]{ep_closed_form()}}, and

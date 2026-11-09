@@ -1,5 +1,12 @@
 
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
 # poissonexact
+
+<!-- badges: start -->
+
+[![R-CMD-check](https://github.com/GSK-Biostatistics/poissonexact/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/GSK-Biostatistics/poissonexact/actions/workflows/R-CMD-check.yaml)
+<!-- badges: end -->
 
 Exact conditional inference for Poisson regression: exact conditional
 maximum likelihood estimates, exact p-values, and exact confidence
@@ -35,12 +42,17 @@ intentionally similar.
 
 ## Installation
 
-This package is internal to GSK and is not on CRAN. Install from the
-internal GitHub mirror:
+Install the released version of {poissonexact} from CRAN:
+
+``` r
+install.packages("poissonexact")
+```
+
+Or install the development version from GitHub with:
 
 ``` r
 # install.packages("pak")
-pak::pkg_install("gsk-tech/poissonexact")
+pak::pak("GSK-Biostatistics/poissonexact")
 ```
 
 ## A minimal example
@@ -72,11 +84,3 @@ See `vignette("Theory-Implementation")` for the full statistical
 derivation and `vignette("Example")` for a realistic, stratified worked
 example (including a Monte Carlo check of empirical coverage against the
 usual asymptotic Wald approach).
-
-## Status
-
-This package is under active internal development (`Version: 0.1.0`).
-See `NEWS.md` for what’s currently implemented and
-`CHANGES-updated-package.md` / `REMAINING-POINTS.md` (in this staging
-folder) for the current review status against the tech-team’s code
-review.
