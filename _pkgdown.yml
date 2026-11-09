@@ -15,9 +15,9 @@ articles:
 - title: Theory and Implementation
   navbar: ~
   contents:
-  - vignettes/Theory-Implementation
+  - vignettes/Theory-Implementation.Rmd
 
 - title: A Low-Incidence Vaccine Efficacy Example
   navbar: ~
   contents:
-  - vignettes/Example
+  - vignettes/Example.Rmd
