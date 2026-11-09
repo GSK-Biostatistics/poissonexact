@@ -224,25 +224,25 @@ examples. Statistics in Medicine, 14(19):2143-2160, 1995.</p>
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span></span></span>
-<span class="r-in"><span>  group <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span> <span class="fl">1L</span>,  <span class="fl">1L</span>,  <span class="fl">1L</span>,  <span class="fl">0L</span>,  <span class="fl">0L</span>,  <span class="fl">0L</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>  age      <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">50L</span>, <span class="fl">60L</span>, <span class="fl">70L</span>, <span class="fl">50L</span>, <span class="fl">60L</span>, <span class="fl">70L</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>  group <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1L</span>, <span class="fl">1L</span>, <span class="fl">1L</span>, <span class="fl">0L</span>, <span class="fl">0L</span>, <span class="fl">0L</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>  age <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">50L</span>, <span class="fl">60L</span>, <span class="fl">70L</span>, <span class="fl">50L</span>, <span class="fl">60L</span>, <span class="fl">70L</span><span class="op">)</span>,</span></span>
 <span class="r-in"><span>  subjects <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">3492</span>, <span class="fl">2141</span>, <span class="fl">1711</span>, <span class="fl">3525</span>, <span class="fl">2166</span>, <span class="fl">1724</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>  cases    <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span>   <span class="fl">3</span>,    <span class="fl">2</span>,    <span class="fl">1</span>,   <span class="fl">10</span>,   <span class="fl">7</span>,   <span class="fl">5</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>  futime   <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">50</span>, <span class="fl">60</span>, <span class="fl">40</span>, <span class="fl">51</span>, <span class="fl">62</span>, <span class="fl">42</span><span class="op">)</span></span></span>
+<span class="r-in"><span>  cases <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">3</span>, <span class="fl">2</span>, <span class="fl">1</span>, <span class="fl">10</span>, <span class="fl">7</span>, <span class="fl">5</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>  futime <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">50</span>, <span class="fl">60</span>, <span class="fl">40</span>, <span class="fl">51</span>, <span class="fl">62</span>, <span class="fl">42</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="va">df</span><span class="op">$</span><span class="va">lnfutime</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Log.html" class="external-link">log</a></span><span class="op">(</span><span class="va">df</span><span class="op">$</span><span class="va">futime</span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="fu">ep_multi_shift</span><span class="op">(</span></span></span>
-<span class="r-in"><span>  formula    <span class="op">=</span> <span class="va">cases</span> <span class="op">~</span> <span class="va">group</span>,</span></span>
-<span class="r-in"><span>  data       <span class="op">=</span> <span class="va">df</span>,</span></span>
-<span class="r-in"><span>  offset     <span class="op">=</span> <span class="st">"lnfutime"</span>,</span></span>
+<span class="r-in"><span>  formula <span class="op">=</span> <span class="va">cases</span> <span class="op">~</span> <span class="va">group</span>,</span></span>
+<span class="r-in"><span>  data <span class="op">=</span> <span class="va">df</span>,</span></span>
+<span class="r-in"><span>  offset <span class="op">=</span> <span class="st">"lnfutime"</span>,</span></span>
 <span class="r-in"><span>  offset_log <span class="op">=</span> <span class="cn">TRUE</span>,</span></span>
-<span class="r-in"><span>  strata     <span class="op">=</span> <span class="st">"age"</span>,</span></span>
+<span class="r-in"><span>  strata <span class="op">=</span> <span class="st">"age"</span>,</span></span>
 <span class="r-in"><span>  exact_vars <span class="op">=</span> <span class="st">"group"</span>,</span></span>
 <span class="r-in"><span>  ref_levels <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>group<span class="op">=</span><span class="st">"0"</span>, age<span class="op">=</span><span class="st">"50"</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>  alpha      <span class="op">=</span> <span class="fl">0.05</span>,</span></span>
-<span class="r-in"><span>  verbose    <span class="op">=</span> <span class="cn">TRUE</span>,</span></span>
+<span class="r-in"><span>  alpha <span class="op">=</span> <span class="fl">0.05</span>,</span></span>
+<span class="r-in"><span>  verbose <span class="op">=</span> <span class="cn">TRUE</span>,</span></span>
 <span class="r-in"><span>  ci_type <span class="op">=</span> <span class="st">"two-sided"</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
@@ -260,7 +260,6 @@ examples. Statistics in Medicine, 14(19):2143-2160, 1995.</p>
 <span class="r-out co"><span class="r-pr">#&gt;</span> ------------------------------------------------------------------------------</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>  Parameter Estimate  StdError Alpha   LowerCL   UpperCL      PValue SuffStat</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span>     group1 -1.26913 0.4605711  0.05 -2.372642 -0.335739 0.004763324        6</span>
-<span class="r-in"><span></span></span>
 </code></pre></div>
     </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>

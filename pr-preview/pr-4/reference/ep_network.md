@@ -142,25 +142,25 @@ Graphical Statistics, 1(1):21-40, 1992.
 
 ``` r
 df <- data.frame(
-  group = c( 1L,  1L,  1L,  0L,  0L,  0L),
-  age      = c(50L, 60L, 70L, 50L, 60L, 70L),
+  group = c(1L, 1L, 1L, 0L, 0L, 0L),
+  age = c(50L, 60L, 70L, 50L, 60L, 70L),
   subjects = c(3492, 2141, 1711, 3525, 2166, 1724),
-  cases    = c(   3,    2,    1,   10,   7,   5),
-  futime   = c(50, 60, 40, 51, 62, 42)
+  cases = c(3, 2, 1, 10, 7, 5),
+  futime = c(50, 60, 40, 51, 62, 42)
 )
 
 df$lnfutime <- log(df$futime)
 
 ep_network(
-  formula    = cases ~ group,
-  data       = df,
-  offset     = "lnfutime",
+  formula = cases ~ group,
+  data = df,
+  offset = "lnfutime",
   offset_log = TRUE,
-  strata     = "age",
+  strata = "age",
   exact_vars = "group",
   ref_levels = list(group="0", age="50"),
-  alpha      = 0.05,
-  verbose    = TRUE,
+  alpha = 0.05,
+  verbose = TRUE,
   ci_type = "two-sided"
 )
 #> 

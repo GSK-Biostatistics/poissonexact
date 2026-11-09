@@ -83,11 +83,3 @@ for the full statistical derivation and
 [`vignette("Example")`](https://gsk-biostatistics.github.io/poissonexact/articles/Example.md)
 for a realistic, stratified worked example (including a Monte Carlo
 check of empirical coverage against the usual asymptotic Wald approach).
-
-## Status
-
-This package is under active internal development (`Version: 0.1.0`).
-See `NEWS.md` for what’s currently implemented and
-`CHANGES-updated-package.md` / `REMAINING-POINTS.md` (in this staging
-folder) for the current review status against the tech-team’s code
-review.
