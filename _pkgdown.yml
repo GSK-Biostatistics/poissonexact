@@ -1,0 +1,12 @@
+url: https://gsk-tech.github.io/poissonexact
+template:
+  bootstrap: 5
+  bootswatch: united
+  math-rendering: katex
+
+navbar:
+  type: light
+  bg: none
+
+development:
+  mode: auto
