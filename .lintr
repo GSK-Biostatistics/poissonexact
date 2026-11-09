@@ -1,0 +1,22 @@
+linters: all_linters(
+    indentation_linter = NULL,
+    line_length_linter(85, ignore_string_bodies = TRUE),
+    commented_code_linter = NULL,
+    cyclocomp_linter(complexity_limit = 20L),
+    object_name_linter(styles = "snake_case"),
+    implicit_integer_linter = NULL,
+    expect_identical_linter = NULL,
+    nonportable_path_linter = NULL,
+    strings_as_factors_linter = NULL,
+    undesirable_function_linter(
+        fun = modify_defaults(
+            defaults = default_undesirable_functions,
+            structure = NULL
+            )
+        )
+    )
+exclusions: list(
+    "tests/testthat.R",
+    "vignettes/"
+    )
+encoding: "UTF-8"
