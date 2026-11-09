@@ -10,3 +10,14 @@ navbar:
 
 development:
   mode: auto
+
+articles:
+- title: Theory and Implementation
+  navbar: ~
+  contents:
+  - vignettes/Theory-Implementation
+
+- title: A Low-Incidence Vaccine Efficacy Example
+  navbar: ~
+  contents:
+  - vignettes/Example
