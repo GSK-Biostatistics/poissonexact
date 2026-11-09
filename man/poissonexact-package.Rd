@@ -11,9 +11,9 @@ Computes exact conditional maximum likelihood estimates, exact p-values, and exa
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/gsk-tech/poissonexact}
-  \item \url{https://gsk-tech.github.io/poissonexact}
-  \item Report bugs at \url{https://github.com/gsk-tech/poissonexact/issues}
+  \item \url{https://github.com/GSK-Biostatistics/poissonexact}
+  \item \url{https://gsk-biostatistics.github.io/poissonexact/}
+  \item Report bugs at \url{https://github.com/GSK-Biostatistics/poissonexact/issues}
 }
 
 }
