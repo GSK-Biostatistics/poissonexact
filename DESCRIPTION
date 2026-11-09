@@ -25,7 +25,7 @@ Description: Computes exact conditional maximum likelihood estimates,
     aggressive mid-computation pruning for larger problems, generalizing
     Mehta, Patel and Senchaudhuri (1992)
     <doi:10.1080/10618600.1992.10474574> to bounded Poisson counts.
-License: file LICENSE
+License: Apache License (>= 2)
 URL: https://github.com/gsk-tech/poissonexact,
     https://gsk-tech.github.io/poissonexact
 BugReports: https://github.com/gsk-tech/poissonexact/issues
