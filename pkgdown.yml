@@ -1,0 +1,7 @@
+pandoc: 3.8.3
+pkgdown: 2.2.1
+pkgdown_sha: ~
+articles:
+  Example: Example.html
+  Theory-Implementation: Theory-Implementation.html
+last_built: 2026-11-09T10:48Z
