@@ -26,7 +26,8 @@ Description: Computes exact conditional maximum likelihood estimates,
     Mehta, Patel and Senchaudhuri (1992)
     <doi:10.1080/10618600.1992.10474574> to bounded Poisson counts.
 License: Apache License (>= 2)
-URL: https://github.com/GSK-Biostatistics/poissonexact
+URL: https://github.com/GSK-Biostatistics/poissonexact,
+    https://gsk-biostatistics.github.io/poissonexact/
 BugReports: https://github.com/GSK-Biostatistics/poissonexact/issues
 Depends:
     R (>= 4.1.0)
