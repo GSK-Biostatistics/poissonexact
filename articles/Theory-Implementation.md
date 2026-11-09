@@ -1243,30 +1243,31 @@ M(i,k) &:=
 \binom{t_s}{j_s}\left(\frac{e_s^{(1)}}{e_s^{(0)}}\right)^{j_s}
 \qquad\text{so that}\qquad c_k = M(Q,k). \end{aligned}, M(i,k) satisfies
 the one-stratum-at-a-time recursion obtained by multiplying in stratum
-i’s own polynomial, M(i,k) = \sum\_{r=L_i}^{H_i} M(i-1,\\ k-r)\\
-\binom{t_i}{r}\left(\frac{e_i^{(1)}}{e_i^{(0)}}\right)^{r}, \qquad L_i
-:= \max\big(0,\\ k-V\_{i-1}\big), \quad H_i := \min\big(k,\\ t_i\big),
-where V_i := \min\\\big(N,\\ \sum\_{s=1}^i t_s\big) and V_0 := 0. Here N
-denotes how far the table actually needs to be built for the purpose at
-hand: it is not a fixed constant, but whichever of the following two
-values the caller actually needs: the observed total k\_{\mathrm{obs}} =
-\sum_s y_s^{(1)} for the truncated table used by the p-value and
-confidence interval (Section [6.5](#sec6-5)), or the full \sum_s t_s for
-the complete table the conditional MLE needs (Section [8.2](#sec8-2)).
-This recursion computes exactly the same c_k as the direct expansion of
-(6.2). It is the identical polynomial multiplication, one stratum at a
-time, with one addition: at every intermediate stage i, only
-coefficients k \le V_i are ever computed or stored. This is a safe
-truncation. It never discards a coefficient the final table could still
-need, because every stratum’s contribution to k is non-negative: a
-partial total already above N can never be brought back down to N or
-below by any later stratum, so it can never contribute to a final
-coefficient c_k with k\le N. Bounding the table’s width by N at every
-stage, rather than letting it grow with the full (and possibly much
-larger) \sum\_{s\le i} t_s, is the entire source of the (ST)^2 speed-up
-over the 1987 method’s T^Q. The two algorithms compute the identical
-sequence of polynomial multiplications; they differ only in how much of
-each intermediate result is worth keeping.
+i’s own polynomial, \begin{aligned} M(i,k) = \sum\_{r=L_i}^{H_i}
+M(i-1,\\ k-r)\\
+\binom{t_i}{r}\left(\frac{e_i^{(1)}}{e_i^{(0)}}\right)^{r}, \\ \qquad
+L_i := \max\big(0,\\ k-V\_{i-1}\big), \quad H_i := \min\big(k,\\
+t_i\big), \end{aligned} where V_i := \min\\\big(N,\\ \sum\_{s=1}^i
+t_s\big) and V_0 := 0. Here N denotes how far the table actually needs
+to be built for the purpose at hand: it is not a fixed constant, but
+whichever of the following two values the caller actually needs: the
+observed total k\_{\mathrm{obs}} = \sum_s y_s^{(1)} for the truncated
+table used by the p-value and confidence interval (Section
+[6.5](#sec6-5)), or the full \sum_s t_s for the complete table the
+conditional MLE needs (Section [8.2](#sec8-2)). This recursion computes
+exactly the same c_k as the direct expansion of (6.2). It is the
+identical polynomial multiplication, one stratum at a time, with one
+addition: at every intermediate stage i, only coefficients k \le V_i are
+ever computed or stored. This is a safe truncation. It never discards a
+coefficient the final table could still need, because every stratum’s
+contribution to k is non-negative: a partial total already above N can
+never be brought back down to N or below by any later stratum, so it can
+never contribute to a final coefficient c_k with k\le N. Bounding the
+table’s width by N at every stage, rather than letting it grow with the
+full (and possibly much larger) \sum\_{s\le i} t_s, is the entire source
+of the (ST)^2 speed-up over the 1987 method’s T^Q. The two algorithms
+compute the identical sequence of polynomial multiplications; they
+differ only in how much of each intermediate result is worth keeping.
 
 `compute_ck_natlog()` implements this recursion directly and by name.
 `vvi <- pmin(max_cases, cumsum(t))` is exactly V_i for every stratum at
