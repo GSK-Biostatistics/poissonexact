@@ -1,4 +1,4 @@
-# poissonexact 0.1.0
+# poissonexact (development version)
 
 ## Exported functions
 
