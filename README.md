@@ -35,12 +35,17 @@ intentionally similar.
 
 ## Installation
 
-This package is internal to GSK and is not on CRAN. Install from the
-internal GitHub mirror:
+Install the released version of {poissonexact} from CRAN:
+
+``` r
+install.packages("poissonexact")
+```
+
+Or install the development version from GitHub with:
 
 ``` r
 # install.packages("pak")
-pak::pkg_install("gsk-tech/poissonexact")
+pak::pak("GSK-Biostatistics/poissonexact")
 ```
 
 ## A minimal example
