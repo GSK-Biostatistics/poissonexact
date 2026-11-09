@@ -1,5 +1,12 @@
 
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
 # poissonexact
+
+<!-- badges: start -->
+
+[![R-CMD-check](https://github.com/GSK-Biostatistics/poissonexact/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/GSK-Biostatistics/poissonexact/actions/workflows/R-CMD-check.yaml)
+<!-- badges: end -->
 
 Exact conditional inference for Poisson regression: exact conditional
 maximum likelihood estimates, exact p-values, and exact confidence
