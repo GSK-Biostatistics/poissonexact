@@ -1471,9 +1471,12 @@ M(i,k) &amp;:=
 \end{aligned},
 </span> <span class="math inline">M(i,k)</span> satisfies the
 one-stratum-at-a-time recursion obtained by multiplying in stratum <span class="math inline">i</span>’s own polynomial, <span class="math display">
+\begin{aligned}
 M(i,k) = \sum_{r=L_i}^{H_i} M(i-1,\ k-r)\,
-\binom{t_i}{r}\left(\frac{e_i^{(1)}}{e_i^{(0)}}\right)^{r}, \qquad L_i
-:= \max\big(0,\ k-V_{i-1}\big), \quad H_i := \min\big(k,\ t_i\big),
+\binom{t_i}{r}\left(\frac{e_i^{(1)}}{e_i^{(0)}}\right)^{r}, \\
+\qquad L_i := \max\big(0,\ k-V_{i-1}\big), \quad H_i := \min\big(k,\
+t_i\big),
+\end{aligned}
 </span> where <span class="math inline">V_i := \min\!\big(N,\
 \sum_{s=1}^i t_s\big)</span> and <span class="math inline">V_0 :=
 0</span>. Here <span class="math inline">N</span> denotes how far the

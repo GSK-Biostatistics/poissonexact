@@ -4,7 +4,7 @@ pkgdown_sha: ~
 articles:
   Example: Example.html
   Theory-Implementation: Theory-Implementation.html
-last_built: 2026-11-09T13:29Z
+last_built: 2026-11-09T14:36Z
 urls:
   reference: https://gsk-biostatistics.github.io/poissonexact/reference
   article: https://gsk-biostatistics.github.io/poissonexact/articles
