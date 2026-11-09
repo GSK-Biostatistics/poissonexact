@@ -28,7 +28,7 @@ Three algorithms are provided for different problem shapes:
 (a different null, significance level, or CI type/direction) about an
 already-fitted result’s `OUTDIST` table without rebuilding it.
 
-The conditioning approach mirrors that used by SAS's `PROC GENMOD`
+The conditioning approach mirrors that used by SAS’s `PROC GENMOD`
 `EXACT` statement; users familiar with that procedure’s options and
 output will find the terminology (`EXACTMAX`, `OFFSET`, `OUTDIST`)
 intentionally similar.
