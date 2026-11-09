@@ -1,0 +1,11 @@
+^poissonexact\.Rproj$
+^\.Rproj\.user$
+^[.]?air[.]toml$
+^\.vscode$
+^\.lintr$
+^LICENSE\.md$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
+^\.github$
+^README\.Rmd$
