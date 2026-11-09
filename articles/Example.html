@@ -3,88 +3,65 @@
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>A Low-Incidence Vaccine Efficacy Example • poissonexact</title>
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
-<script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
-<script src="../pkgdown.js"></script><meta property="og:title" content="A Low-Incidence Vaccine Efficacy Example">
-<!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
+<!-- katex math --><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" integrity="sha384-nB0miv6/jRmo5UMMR1wu3Gz6NLsoTkbqJghGIsx//Rlm+ZU03BU6SQNC66uf4l5+" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" integrity="sha384-7zkQWkzuo3B5mTepMUcHkMB5jZaolc2xDwL6VFqjFALcbeS9Ggm/Yr2r3Dy4lfFg" crossorigin="anonymous"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" integrity="sha384-43gviWU0YVjaDtb/GhzOouOXtZMP/7XUzwPTstBeZFe/+rCMvRwr4yROQP43s0Xk" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script><script src="../katex-auto.js"></script><script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="../deps/bootstrap-5.3.8/bootstrap.min.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.3.8/bootstrap.bundle.min.js"></script><link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
+<link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
+<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="A Low-Incidence Vaccine Efficacy Example">
 </head>
-<body data-spy="scroll" data-target="#toc">
+<body>
+    <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
 
 
-    <div class="container template-article">
-      <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <span class="navbar-brand">
-        <a class="navbar-link" href="../index.html">poissonexact</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.0.0.9000</span>
-      </span>
-    </div>
+    <nav class="navbar navbar-expand-lg fixed-top bg-none" data-bs-theme="light" aria-label="Site navigation"><div class="container">
 
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-<li>
-  <a href="../reference/index.html">Reference</a>
-</li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Articles
+    <a class="navbar-brand me-2" href="../index.html">poissonexact</a>
 
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-<li>
-      <a href="../articles/Example.html">A Low-Incidence Vaccine Efficacy Example</a>
-    </li>
-    <li>
-      <a href="../articles/Theory-Implementation.html">Exact Conditional Poisson Regression: Theory and Implementation</a>
-    </li>
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Unreleased version">0.0.0.9000</small>
+
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar" class="collapse navbar-collapse ms-3">
+      <ul class="navbar-nav me-auto">
+<li class="nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
+<li class="active nav-item dropdown">
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
+<li><a class="dropdown-item" href="../articles/Theory-Implementation.html">Exact Conditional Poisson Regression: Theory and Implementation</a></li>
+    <li><a class="dropdown-item" href="../articles/Example.html">A Low-Incidence Vaccine Efficacy Example</a></li>
   </ul>
 </li>
-<li>
-  <a href="../news/index.html">Changelog</a>
-</li>
+<li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
       </ul>
-<ul class="nav navbar-nav navbar-right">
-<li>
-  <a href="https://github.com/GSK-Biostatistics/poissonexact/" class="external-link">
-    <span class="fab fa-github fa-lg"></span>
-
-  </a>
-</li>
+<ul class="navbar-nav">
+<li class="nav-item"><form class="form-inline" role="search">
+ <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="../search.json">
+</form></li>
+<li class="nav-item"><a class="external-link nav-link" href="https://github.com/GSK-Biostatistics/poissonexact/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
       </ul>
 </div>
-<!--/.nav-collapse -->
+
+
   </div>
-<!--/.container -->
-</div>
-<!--/.navbar -->
+</nav><div class="container template-article">
 
 
 
-      </header><div class="row">
-  <div class="col-md-9 contents">
-    <div class="page-header toc-ignore">
-      <h1 data-toc-skip>A Low-Incidence Vaccine Efficacy Example</h1>
+
+<div class="row">
+  <main id="main" class="col-md-9"><div class="page-header">
+
+      <h1>A Low-Incidence Vaccine Efficacy Example</h1>
             
       
       <small class="dont-index">Source: <a href="https://github.com/GSK-Biostatistics/poissonexact/blob/main/vignettes/Example.Rmd" class="external-link"><code>vignettes/Example.Rmd</code></a></small>
-      <div class="hidden name"><code>Example.Rmd</code></div>
-
+      <div class="d-none name"><code>Example.Rmd</code></div>
     </div>
 
     
@@ -228,14 +205,13 @@ vaccine-arm total of zero is not a data error and not a sign the
 simulation is broken; with expected vaccine-arm counts of 0.54, 0.75,
 and 0.81 (summing to a total expected count of only 2.1), an all-zero
 outcome across all three strata has roughly a 1-in-8 chance of happening
-on any given trial
-(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>e</mi><mrow><mi>−</mi><mn>2.1</mn></mrow></msup><mo>≈</mo><mn>0.12</mn></mrow><annotation encoding="application/x-tex">e^{-2.1} \approx 0.12</annotation></semantics></math>),
-purely from Poisson variation, even though the vaccine is genuinely
-working. This is precisely where asymptotic Wald inference is at its
-least trustworthy, and precisely where exact conditional inference has
-no such weakness, because it never relies on a large-sample
-approximation in the first place. The next two sections show what each
-method actually does with this data.</p>
+on any given trial (<span class="math inline">e^{-2.1} \approx
+0.12</span>), purely from Poisson variation, even though the vaccine is
+genuinely working. This is precisely where asymptotic Wald inference is
+at its least trustworthy, and precisely where exact conditional
+inference has no such weakness, because it never relies on a
+large-sample approximation in the first place. The next two sections
+show what each method actually does with this data.</p>
 </div>
 <div class="section level2">
 <h2 id="recommended-aggregate-repeated-covariate-patterns-before-fitting">Recommended: aggregate repeated covariate patterns before
@@ -398,20 +374,19 @@ very edge of what this statistic can attain, since it cannot go any
 lower. <code><a href="../articles/Theory-Implementation.html">vignette("Theory-Implementation")</a></code> Sections 8.3-8.4
 describe exactly this situation: when the observed value is at the
 boundary of its attainable range, the corresponding confidence limit is
-set to
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∓</mi><mi>∞</mi></mrow><annotation encoding="application/x-tex">\mp\infty</annotation></semantics></math>
-directly rather than estimated, and here that shows up as
-<code>Estimate = -Inf</code> and <code>LowerCL = -Inf</code>. This is
-not a failure or a placeholder; it is the exact, honest answer to “how
-small could the true rate ratio be and still be consistent with zero
-observed events?”: arbitrarily small, so the interval says so explicitly
-instead of printing a number that looks precise but isn’t. The
-<em>upper</em> limit and the p-value are still perfectly well defined
-and informative, as the next chunk shows.</p>
-<p><code>Estimate</code> is on the
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>β</mi><mo>=</mo><mrow><mi mathvariant="normal">log</mi><mo>⁡</mo></mrow><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">rate ratio</mtext><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\beta = \log(\text{rate ratio})</annotation></semantics></math>
-scale used throughout <code><a href="../articles/Theory-Implementation.html">vignette("Theory-Implementation")</a></code>.
-Converting to the rate-ratio and vaccine-efficacy scales:</p>
+set to <span class="math inline">\mp\infty</span> directly rather than
+estimated, and here that shows up as <code>Estimate = -Inf</code> and
+<code>LowerCL = -Inf</code>. This is not a failure or a placeholder; it
+is the exact, honest answer to “how small could the true rate ratio be
+and still be consistent with zero observed events?”: arbitrarily small,
+so the interval says so explicitly instead of printing a number that
+looks precise but isn’t. The <em>upper</em> limit and the p-value are
+still perfectly well defined and informative, as the next chunk
+shows.</p>
+<p><code>Estimate</code> is on the <span class="math inline">\beta =
+\log(\text{rate ratio})</span> scale used throughout
+<code><a href="../articles/Theory-Implementation.html">vignette("Theory-Implementation")</a></code>. Converting to the
+rate-ratio and vaccine-efficacy scales:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">rr_exact</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Log.html" class="external-link">exp</a></span><span class="op">(</span><span class="va">fit_exact</span><span class="op">$</span><span class="va">exactparmest</span><span class="op">$</span><span class="va">Estimate</span><span class="op">)</span></span>
 <span><span class="va">rr_ci_exact</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Log.html" class="external-link">exp</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span></span>
@@ -460,18 +435,15 @@ way.</p>
 <span><span class="co">#&gt; age_grp65+     1.0986123 9.128709e-01  1.2034694650 2.287947e-01</span></span></code></pre></div>
 <p>Look closely at the <code>armvaccine</code> row: the standard error
 is <em>four orders of magnitude larger</em> than the estimate itself
-(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">S</mi><mi mathvariant="normal">E</mi></mrow><mo>≈</mo><mn>38</mn><mo>,</mo><mn>543</mn></mrow><annotation encoding="application/x-tex">\mathrm{SE} \approx 38{,}543</annotation></semantics></math>
-against an estimate of
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≈</mo><mi>−</mi><mn>23.9</mn></mrow><annotation encoding="application/x-tex">\approx -23.9</annotation></semantics></math>).
-That imbalance is the signature of quasi-complete separation: with zero
+(<span class="math inline">\mathrm{SE} \approx 38{,}543</span> against
+an estimate of <span class="math inline">\approx -23.9</span>). That
+imbalance is the signature of quasi-complete separation: with zero
 observed events in every vaccine-arm cell, the log-linear model wants to
-push the vaccine coefficient to
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>∞</mi></mrow><annotation encoding="application/x-tex">-\infty</annotation></semantics></math>,
-and the optimizer stops only because it ran out of room to keep moving
-in a fixed number of iterations, not because it found a well-determined
-answer. This is exactly the failure mode this section set out to
-demonstrate, and the next chunk checks for the diagnostic a user would
-normally rely on to catch it:</p>
+push the vaccine coefficient to <span class="math inline">-\infty</span>, and the optimizer stops only because
+it ran out of room to keep moving in a fixed number of iterations, not
+because it found a well-determined answer. This is exactly the failure
+mode this section set out to demonstrate, and the next chunk checks for
+the diagnostic a user would normally rely on to catch it:</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/cat.html" class="external-link">cat</a></span><span class="op">(</span><span class="st">"fit_glm$converged:"</span>, <span class="va">fit_glm</span><span class="op">$</span><span class="va">converged</span>, <span class="st">"\n"</span><span class="op">)</span></span>
 <span><span class="co">#&gt; fit_glm$converged: TRUE</span></span>
@@ -708,14 +680,10 @@ once <code><a href="../reference/ep_closed_form.html">ep_closed_form()</a></code
 about the same effect stuck re-running the whole enumeration?</p>
 <p><code><a href="../articles/Theory-Implementation.html">vignette("Theory-Implementation")</a></code> Section 6.5 derives
 the fact that makes the answer no: because the exponential-tilt family
-(3.3)/(6.3) sums to one at <em>every</em> value of
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>β</mi><annotation encoding="application/x-tex">\beta</annotation></semantics></math>,
-a tail probability, and therefore a p-value against any null, or a
-confidence limit at any
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>,
-can be recomputed directly from the <em>already-built</em> coefficient
-table, without rebuilding it. <code>fit_exact$OUTDIST</code> <em>is</em>
-that table:</p>
+(3.3)/(6.3) sums to one at <em>every</em> value of <span class="math inline">\beta</span>, a tail probability, and therefore a
+p-value against any null, or a confidence limit at any <span class="math inline">\alpha</span>, can be recomputed directly from the
+<em>already-built</em> coefficient table, without rebuilding it.
+<code>fit_exact$OUTDIST</code> <em>is</em> that table:</p>
 <div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">parm</span> <span class="op">&lt;-</span> <span class="st">"armvaccine"</span></span>
 <span><span class="va">dist1d</span> <span class="op">&lt;-</span> <span class="va">fit_exact</span><span class="op">$</span><span class="va">OUTDIST</span><span class="op">[[</span><span class="va">parm</span><span class="op">]</span><span class="op">]</span></span>
@@ -733,34 +701,25 @@ that table:</p>
 <span><span class="va">t_obs</span></span>
 <span><span class="co">#&gt; [1] 0</span></span></code></pre></div>
 <p><code>SuffStat</code> is the attainable values of the sufficient
-statistic
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>
-(the vaccine-arm case count, summed over strata); <code>LogWeight</code>
-is
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">log</mi><mo>⁡</mo></mrow><mi>C</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\log C(t)</annotation></semantics></math>
-(Section 3.4); <code>prob</code> is the null
-(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>β</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\beta = 0</annotation></semantics></math>)
-probability of each value, already normalized. Turning this table into a
-p-value or a confidence interval at a <em>different</em> null value or
-significance level is exactly what
-<code><a href="../reference/recompute_exact_inference.html">recompute_exact_inference()</a></code> does: it is built from the same
-tilt-probability/root-finding machinery every fitting function already
-uses internally, exported as one small convenience wrapper, (see
-<code><a href="../reference/recompute_exact_inference.html">?recompute_exact_inference</a></code>).</p>
+statistic <span class="math inline">T</span> (the vaccine-arm case
+count, summed over strata); <code>LogWeight</code> is <span class="math inline">\log C(t)</span> (Section 3.4); <code>prob</code> is
+the null (<span class="math inline">\beta = 0</span>) probability of
+each value, already normalized. Turning this table into a p-value or a
+confidence interval at a <em>different</em> null value or significance
+level is exactly what <code><a href="../reference/recompute_exact_inference.html">recompute_exact_inference()</a></code> does: it
+is built from the same tilt-probability/root-finding machinery every
+fitting function already uses internally, exported as one small
+convenience wrapper, (see <code><a href="../reference/recompute_exact_inference.html">?recompute_exact_inference</a></code>).</p>
 <div class="section level3">
 <h3 id="a-different-null-hypothesis-is-efficacy-above-50-not-just-above-0">A different null hypothesis: is efficacy above 50%, not just above
 0%?<a class="anchor" aria-label="anchor" href="#a-different-null-hypothesis-is-efficacy-above-50-not-just-above-0"></a>
 </h3>
-<p>The original fit tested the usual null of no effect
-(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">R</mi><mi mathvariant="normal">R</mi></mrow><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\mathrm{RR}=1</annotation></semantics></math>,
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>β</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\beta=0</annotation></semantics></math>).
-A regulator might instead want to know whether this trial’s data are
-consistent with a <em>pre-specified superiority margin</em>, for
-example, whether the observed efficacy is significantly above 50%,
-i.e. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>0</mn></msub><mo>:</mo><mrow><mi mathvariant="normal">R</mi><mi mathvariant="normal">R</mi></mrow><mo>=</mo><mn>0.50</mn></mrow><annotation encoding="application/x-tex">H_0: \mathrm{RR}=0.50</annotation></semantics></math>
-against
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>1</mn></msub><mo>:</mo><mrow><mi mathvariant="normal">R</mi><mi mathvariant="normal">R</mi></mrow><mo>&lt;</mo><mn>0.50</mn></mrow><annotation encoding="application/x-tex">H_1: \mathrm{RR}&lt;0.50</annotation></semantics></math>
-(equivalently, true VE exceeds 50%):</p>
+<p>The original fit tested the usual null of no effect (<span class="math inline">\mathrm{RR}=1</span>, <span class="math inline">\beta=0</span>). A regulator might instead want to
+know whether this trial’s data are consistent with a <em>pre-specified
+superiority margin</em>, for example, whether the observed efficacy is
+significantly above 50%, i.e. <span class="math inline">H_0:
+\mathrm{RR}=0.50</span> against <span class="math inline">H_1:
+\mathrm{RR}&lt;0.50</span> (equivalently, true VE exceeds 50%):</p>
 <div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">beta0_margin</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/Log.html" class="external-link">log</a></span><span class="op">(</span><span class="fl">1</span> <span class="op">-</span> <span class="fl">0.50</span><span class="op">)</span> <span class="co"># beta corresponding to a 50% efficacy margin</span></span>
 <span></span>
@@ -775,17 +734,15 @@ against
 <code>p_lower</code> (evidence that true efficacy exceeds 50%); this is
 read directly off the lower tail of the <em>same</em>
 <code>dist1d</code> table used for the original test, evaluated at a
-different
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>β</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\beta_0</annotation></semantics></math>:
-no new dynamic program, no new convolution, no new network pass.</p>
+different <span class="math inline">\beta_0</span>: no new dynamic
+program, no new convolution, no new network pass.</p>
 </div>
 <div class="section level3">
 <h3 id="a-different-confidence-level-90-instead-of-95">A different confidence level: 90% instead of 95%<a class="anchor" aria-label="anchor" href="#a-different-confidence-level-90-instead-of-95"></a>
 </h3>
 <p>Likewise, a 90% interval instead of the original 95% one is a
-different
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>
-applied to the same table:</p>
+different <span class="math inline">\alpha</span> applied to the same
+table:</p>
 <div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">ci_90</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/recompute_exact_inference.html">recompute_exact_inference</a></span><span class="op">(</span><span class="va">fit_exact</span>, <span class="va">parm</span>, alpha <span class="op">=</span> <span class="fl">0.10</span><span class="op">)</span></span>
 <span></span>
@@ -818,12 +775,11 @@ repeat.</p>
 <p>Rather than rely on a single simulated trial to make the point, this
 section repeats the simulation many times and refits both ways each
 time. Every replicate is kept, including every all-zero-vaccine-arm
-replicate (roughly a 1-in-8 chance each time,
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>e</mi><mrow><mi>−</mi><mn>2.1</mn></mrow></msup><mo>≈</mo><mn>0.122</mn></mrow><annotation encoding="application/x-tex">e^{-2.1} \approx 0.122</annotation></semantics></math>),
-because the point of this section is to measure what actually happens
-across the full range of outcomes this design can produce, boundary
-cases included, rather than to report a tidy number that only describes
-the well-behaved fits.</p>
+replicate (roughly a 1-in-8 chance each time, <span class="math inline">e^{-2.1} \approx 0.122</span>), because the point of
+this section is to measure what actually happens across the full range
+of outcomes this design can produce, boundary cases included, rather
+than to report a tidy number that only describes the well-behaved
+fits.</p>
 <p>Two things make a plain confidence-interval-width comparison a poor
 fit for that goal here. First, a replicate at the boundary gives the
 exact method an <code>-Inf</code> lower limit, which forces any width
@@ -991,14 +947,13 @@ for the Wald method, even though both are analysing the identical
 simulated data every time. The gap is concentrated exactly among the
 boundary replicates: with zero vaccine-arm events, the exact method’s
 <code>UpperCL</code> is still a small, finite, sub-zero number (as the
-single worked example showed, <code>UpperCL</code>
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≈</mo><mi>−</mi><mn>0.16</mn></mrow><annotation encoding="application/x-tex">\approx -0.16</annotation></semantics></math>,
-correctly significant), while the Wald method’s own <code>hi_i</code> is
-a huge positive number on those same replicates, so it never registers
-as significant at all. <code><a href="https://rdrr.io/r/stats/glm.html" class="external-link">glm()</a></code> does not merely produce an
-uninformative interval on a boundary replicate; it actively loses the
-power to detect a real effect exactly where the data are sparsest, which
-is exactly where a trial’s analysis plan needs that power the most.</p>
+single worked example showed, <code>UpperCL</code> <span class="math inline">\approx -0.16</span>, correctly significant), while
+the Wald method’s own <code>hi_i</code> is a huge positive number on
+those same replicates, so it never registers as significant at all.
+<code><a href="https://rdrr.io/r/stats/glm.html" class="external-link">glm()</a></code> does not merely produce an uninformative interval on
+a boundary replicate; it actively loses the power to detect a real
+effect exactly where the data are sparsest, which is exactly where a
+trial’s analysis plan needs that power the most.</p>
 </div>
 <div class="section level2">
 <h2 id="a-more-general-model-adjusting-for-a-covariate-on-top-of-stratification">A more general model: adjusting for a covariate on top of
@@ -1202,29 +1157,22 @@ here) of carrying a trial’s randomization-stratification factors into
 the primary analysis as strata.</li>
 </ul>
 </div>
-  </div>
-
-  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
-
-      </div>
-
+  </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
+    </nav></aside>
 </div>
 
 
 
-      <footer><div class="copyright">
-  <p></p>
-<p>Developed by Ali Charkhi, GlaxoSmithKline Research &amp; Development Limited.</p>
+    <footer><div class="pkgdown-footer-left">
+  <p>Developed by Ali Charkhi, GlaxoSmithKline Research &amp; Development Limited.</p>
 </div>
 
-<div class="pkgdown">
-  <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.1.</p>
+<div class="pkgdown-footer-right">
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.1.</p>
 </div>
 
-      </footer>
+    </footer>
 </div>
-
 
 
 
